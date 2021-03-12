@@ -1,6 +1,8 @@
 let controller;
 let slideScene;
 
+gsap.to(".hide", 1, { x: "100%" }, 1);
+
 controller = new ScrollMagic.Controller();
 const sliders = document.querySelectorAll(".w");
 console.log(sliders);
@@ -9,11 +11,12 @@ sliders.forEach((slide, index, slides) => {
   let img = slide.querySelector(".wimg");
 
   const slideTl = gsap.timeline({
-    defaults: { duration: 1, ease: "power1.in" },
+    defaults: { ease: "power1.in" },
   });
 
-  slideTl.to(detail, { x: "0%", y: "0%" });
-  slideTl.to(img, { x: "0%", y: "0%" }, "-=1");
+  slideTl.to(slide, 0.5, { opacity: 1 });
+  slideTl.to(detail, 1, { x: "0%" });
+  slideTl.to(img, 1, { x: "0%" }, "-=1");
 
   slideScene = new ScrollMagic.Scene({
     triggerElement: slide,

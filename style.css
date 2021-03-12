@@ -51,6 +51,8 @@
   transform: rotate(180deg);
 }
 .w {
+  position: relative;
+  overflow: hidden;
   z-index: 2;
   margin: 5vh 0 5vh 0;
   min-height: 90vh;
@@ -58,6 +60,15 @@
   display: flex;
   flex-wrap: wrap-reverse;
   align-items: center;
+  background-color: aliceblue;
+  border-radius: 25px;
+  background: linear-gradient(
+    120deg,
+    rgba(83, 82, 82, 0.8),
+    rgba(83, 82, 82, 0.2)
+  );
+  backdrop-filter: blur(20px);
+  opacity: 0;
 }
 
 .wdetail {
@@ -69,7 +80,7 @@
   justify-content: center;
   align-items: center;
   color: aliceblue;
-  transform: translate(-150%, 50%);
+  transform: translate(-150%);
 }
 .wdetail h1 {
   background: -webkit-linear-gradient(rgb(110, 207, 123), rgb(111, 144, 214));
@@ -101,7 +112,7 @@ button {
   width: 60%;
   display: flex;
   align-items: center;
-  transform: translate(150%, 50%);
+  transform: translate(150%);
 
   justify-content: center;
 }
