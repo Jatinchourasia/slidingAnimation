@@ -1,5 +1,15 @@
 let controller;
 let slideScene;
+const viewBtn = document.querySelectorAll(".view-btn");
+
+viewBtn.forEach((btn) => {
+  btn.addEventListener("mousemove", () => {
+    gsap.to(".imggg", 0.7, { x: "30%", ease: "sine.in", scale: 1.5 });
+  });
+  btn.addEventListener("mouseleave", () => {
+    gsap.to(".imggg", 0.7, { x: "0%", ease: "sine.in", scale: 1 });
+  });
+});
 
 gsap.to(".hide", 1, { x: "100%" }, 1);
 
@@ -20,7 +30,7 @@ sliders.forEach((slide, index, slides) => {
 
   slideScene = new ScrollMagic.Scene({
     triggerElement: slide,
-    triggerHook: 0.3,
+    triggerHook: 0.4,
     reverse: false,
   })
     .setTween(slideTl)

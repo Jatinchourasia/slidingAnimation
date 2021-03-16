@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-family: "poppins";
 }
+body {
+}
 
 .work {
   min-height: 100vh;
@@ -12,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
   overflow: hidden;
   flex-direction: column;
   z-index: -2;
@@ -104,6 +106,8 @@ button {
   border: none;
   border-radius: 9px;
   font-size: 1rem;
+  cursor: pointer;
+  z-index: 4;
 }
 .wimg {
   flex: 2 1 25rem;
@@ -122,7 +126,7 @@ button {
   max-width: 100%;
   vertical-align: middle;
   border: 0;
-  z-index: 6;
+  z-index: 1;
   object-fit: cover;
 
   padding: 1rem;
